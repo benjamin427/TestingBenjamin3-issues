@@ -1,0 +1,42 @@
+{
+  "name": "frameworkanalysis_cypress_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:prod:open:Chrome": "cypress open  --e2e --browser chrome",
+    "cy:prod:open:Firefox": "cypress open --e2e --browser firefox",
+    "cy:prod:open:Edge": "cypress open --e2e --browser edge",
+    "cy:prod:run:Chrome": "cypress run --spec cypress/e2e/features/* --browser chrome",
+    "cy:prod:run:Firefox": "cypress run --spec cypress/e2e/features/*  --browser firefox",
+    "cy:prod:run:Edge": "cypress run --spec cypress/e2e/features/* --browser edge",
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports ",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-report": "mochawesome-merge cypress/reports/*.json > mochawesome.json ",
+    "generate-report": "marge mochawesome.json",
+    "posttest": "npm run combine-report && npm run generate-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjamin427/TestingBenjamin3-issues.git"
+  },
+  "author": "Benjamin Saint Elien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjamin427/TestingBenjamin3-issues/issues"
+  },
+  "homepage": "https://github.com/benjamin427/TestingBenjamin3-issues#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.6.3"
+  },
+  "devDependencies": {
+    "chai": "^5.0.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
