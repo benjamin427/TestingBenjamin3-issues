@@ -1,4 +1,4 @@
-Note: This automation framework was created to test PHPTravels website. I'm currently fixing the left arrow folder and try to replace 
+Note: This automation framework was created to test the PHPTravels website. I'm currently fixing the left arrow folder and trying to replace 
 it with a normal file folder containing features and step definitions. That folder was empty after pushing it to this repository. 
 
 Feature: PHP Travels create account form
